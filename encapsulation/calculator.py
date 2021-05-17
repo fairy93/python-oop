@@ -1,7 +1,7 @@
 class Calculator:
     def setdata(self, first, second):
         self.first = first
-        self.second =second
+        self.second = second
 
     def addCalc(self):
         return self.first + self.second
@@ -15,11 +15,11 @@ class Calculator:
     def divCalc(self):
         return self.first / self.second
 
+
 if __name__ == '__main__':
     c = Calculator()
     c.setdata(3, 5)
-    print(c.add())
-    print(c.mul())
-    print(c.sub())
-    print(c.div())
-
+    print(c.addCalc())
+    print(c.mulCalc())
+    print(c.subCalc())
+    print(c.divCalc())
