@@ -10,7 +10,7 @@ class Contacts(object):
     def main():
         ls = []
         while True:
-            n = input('프로그램종료 0번, 주소록 추가 1번, 주소록 출력 2번, 주소록 삭제 3번')
+            n = input('프로그램종료 0번, 주소록 추가 1번, 주소록 출력 2번, 주소록 삭제 3번, 주소록 수정 4번')
             if n == '0':
                 break
             elif n == '1':
@@ -19,11 +19,16 @@ class Contacts(object):
                 for i in ls:
                     print(f'{i.get_contact()}')
             elif n == '3':
-                ss = input('삭제할이름을 입력하세요')
+                del_name = input('삭제할 이름을 입력하세요')
                 for i, j in enumerate(ls):
-                    if j.name == ss:
+                    if j.name == del_name:
                         del ls[i]
-
+            elif n == '4':
+                mo_name = input('수정할 주소록의 이름을 입력하세요')
+                mo_info = Contacts(mo_name, input('수정할 전화번호 입력'), input('수정할 이메일 입력'), input('수정할 주소 입력'))
+                for i, j in enumerate(ls):
+                    if j.name == mo_name:
+                        ls[i] = mo_info
             else:
                 print('잘못된 선택입니다')
                 continue
