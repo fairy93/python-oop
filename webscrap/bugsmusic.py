@@ -1,6 +1,8 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
 
+# 해야될작업
+# 차트순위 출력방식 순위, 앨범, 가수 → 1 앨범입니다 홍길동
 
 class BugsMusic(object):
     url = ''
